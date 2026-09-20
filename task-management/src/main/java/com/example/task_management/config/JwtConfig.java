@@ -20,7 +20,6 @@ public class JwtConfig {
 
     @Bean
     public JwtEncoder jwtEncoder() {
-
         return new NimbusJwtEncoder(
                 new ImmutableSecret<>(
                         secret.getBytes(StandardCharsets.UTF_8)
@@ -30,7 +29,6 @@ public class JwtConfig {
 
     @Bean
     public JwtDecoder jwtDecoder() {
-
         SecretKeySpec secretKey = new SecretKeySpec(
                 secret.getBytes(StandardCharsets.UTF_8),
                 "HmacSHA256"
