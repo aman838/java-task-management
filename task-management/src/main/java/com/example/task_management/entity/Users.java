@@ -23,6 +23,9 @@ public class Users {
     @Column(nullable = false)
     private String password;
 
+    @Column
+    private String city;
+
     @OneToMany(mappedBy = "user")
     private List<Task> tasks =  new ArrayList<>();
 }

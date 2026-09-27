@@ -15,4 +15,7 @@ public class UserRequest {
     @NotBlank(message = "Password is Required")
     @Size(min = 6, message = "Password should be 6 character long")
     private String password;
+
+    public static class LocationCooridinates {
+    }
 }
